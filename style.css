@@ -92,5 +92,8 @@ footer {
 .servicos-lista li {
     padding: 2px 0; /* Espaçamento entre os itens */
     border-bottom: 1px solid #ddd; /* Borda inferior para separação visual */
+    @media screen {
+        max-width: 450px;
+    }
 }
 
