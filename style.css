@@ -61,9 +61,16 @@ h2 {
     text-align: center;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
 }
 
-.link-whatsapp {
+img:hover, img:active {
+    transform: scale(1.1); /* Aumenta a imagem em 10% ao passar o mouse */
+    transition: transform 0.3s; /* Adiciona uma transição suave */
+    opacity: revert;
+}
+
+.professional {
     display: block; /* Exibe o texto do link como um bloco */
     text-decoration: none; /* Remove a sublinhação padrão */
     color: black; /* Cor do texto do link */
