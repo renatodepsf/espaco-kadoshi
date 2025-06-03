@@ -44,3 +44,9 @@ document.addEventListener('DOMContentLoaded', function() {
     btn.addEventListener('touchend', () => btn.classList.remove('clicado'));
   });
 });
+
+// BOTAO FLUTUANTE
+document.getElementById('botaoChat').addEventListener('click', function() {
+  window.open('https://api.whatsapp.com/send?phone=5532991397354&text=Olá! Quero tirar uma dúvida.', '_blank');
+});
+
