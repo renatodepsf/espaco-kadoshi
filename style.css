@@ -178,6 +178,38 @@ body {
   line-height: 1.1;
 }
 
+/* BOTAO FLUTUANTE */
+.botao-flutuante {
+  position: fixed;
+  bottom: 28px;
+  right: 22px;
+  z-index: 999;
+  width: 62px;
+  height: 62px;
+  border: none;
+  border-radius: 50%;
+  background: #e781a7;
+  box-shadow: 0 6px 32px #eeb6cf48;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.19s, transform 0.15s, box-shadow 0.19s;
+  animation: flutua 1.5s infinite ease-in-out alternate;
+}
+.botao-flutuante:hover {
+  background: #bc3c76;
+  transform: scale(1.06);
+  box-shadow: 0 12px 40px #bc3c7675;
+}
+@keyframes flutua {
+  to { transform: translateY(-8px);}
+}
+.botao-flutuante svg {
+  display: block;
+}
+
+
 
 /* SOBRE */
 .sobre { background: var(--lavanda-suave); padding: 30px 0 22px 0; }
