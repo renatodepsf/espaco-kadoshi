@@ -18,7 +18,7 @@
             <a href="#inicio">Início</a>
             <a href="#servicos">Serviços</a>
             <a href="#sobre">Sobre</a>
-            <a href="#contato">Contato</a>
+            <a href="#" id="abrirCadastro" class="hero-btn">Cadastre-se</a>
         </nav>
         <button id="menuToggle" class="menu-toggle" aria-label="Abrir menu">
             <span></span><span></span><span></span>
@@ -120,6 +120,33 @@
     </div>
 </footer>
 <script src="assets/js/script.js"></script>
+
+<!--CADASTRE-SE NO MENU-->
+<div id="tela-cadastro" class="tela-cadastro oculto">
+    <div class="container">
+        <header class="header">
+            <div class="container header-inner">
+        <span class="logo">
+          <img src="assets/img/flor-logo.png" alt="Flor Kadoshi" class="logo-flor" />
+          Kadoshi
+        </span>
+            </div>
+        </header>
+
+        <form id="formularioCadastro" class="formulario-cadastro">
+            <h2>Cadastro para Atendimento</h2>
+            <input type="text" id="nome" placeholder="Seu nome" required>
+            <input type="text" id="servico" placeholder="Serviço desejado" required>
+            <input type="tel" id="whatsapp"
+                   placeholder="Digite DDD + número"
+                   pattern="\d{10,11}"
+                   required title="Digite seu DDD + número, somente números">
+            <button type="submit">Enviar via WhatsApp</button>
+            <button type="button" id="fecharCadastro">Cancelar</button>
+        </form>
+    </div>
+</div>
+
 </body>
 
 <div id="tela-inicial">
