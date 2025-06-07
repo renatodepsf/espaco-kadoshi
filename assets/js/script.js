@@ -45,13 +45,91 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+ // EFEITO TELA DE ENTRADA
 window.addEventListener("load", () => {
+  const flor = document.querySelector(".flor-intro");
   const tela = document.getElementById("tela-inicial");
+
+  // Aplica o efeito "dissolver" de entrada
+  flor.classList.add("aparecer");
+
   setTimeout(() => {
     tela.style.opacity = "0";
-    setTimeout(() => tela.remove(), 800);
-  }, 3000);
+    setTimeout(() => {
+      tela.remove();
+
+      // Fade-in nas seções do conteúdo
+      document.querySelectorAll('section, .footer, .header').forEach(el => {
+        el.classList.add('fade-prepare');
+      });
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+          }
+        });
+      }, { threshold: 0.18 });
+
+      document.querySelectorAll('.fade-prepare').forEach(el => observer.observe(el));
+    }, 800); // mesma duração do transition de tela
+  }, 4000); // flor aparece por 4 segundos
 });
+//
+// // TELA DE ENTRADA - MOSTRA APENAS 1 VEZ
+// window.addEventListener("load", () => {
+//   const flor = document.querySelector(".flor-intro");
+//   const tela = document.getElementById("tela-inicial");
+//
+//   const introJaVisto = localStorage.getItem("introVisto");
+//
+//   if (introJaVisto) {
+//     // Usuário já viu a introdução: remove a tela imediatamente
+//     tela.remove();
+//
+//     // Ativa fade-in do conteúdo principal
+//     document.querySelectorAll('section, .footer, .header').forEach(el => {
+//       el.classList.add('fade-prepare');
+//     });
+//
+//     const observer = new IntersectionObserver(entries => {
+//       entries.forEach(entry => {
+//         if (entry.isIntersecting) {
+//           entry.target.classList.add('fade-in');
+//         }
+//       });
+//     }, { threshold: 0.18 });
+//
+//     document.querySelectorAll('.fade-prepare').forEach(el => observer.observe(el));
+//   } else {
+//     // Primeira vez: exibe a flor com efeito dissolver
+//     flor.classList.add("aparecer");
+//
+//     setTimeout(() => {
+//       tela.style.opacity = "0";
+//
+//       setTimeout(() => {
+//         tela.remove();
+//         localStorage.setItem("introVisto", "true");
+//
+//         // Ativa fade-in das seções
+//         document.querySelectorAll('section, .footer, .header').forEach(el => {
+//           el.classList.add('fade-prepare');
+//         });
+//
+//         const observer = new IntersectionObserver(entries => {
+//           entries.forEach(entry => {
+//             if (entry.isIntersecting) {
+//               entry.target.classList.add('fade-in');
+//             }
+//           });
+//         }, { threshold: 0.18 });
+//
+//         document.querySelectorAll('.fade-prepare').forEach(el => observer.observe(el));
+//       }, 800); // duração da transição da tela
+//     }, 4000); // tempo da flor visível
+//   }
+// });
 
 // // BOTAO FLUTUANTE
 // document.getElementById('botaoChat').addEventListener('click', function() {
