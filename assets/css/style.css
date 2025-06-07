@@ -308,8 +308,8 @@ section, .footer, .header { opacity: 1; transform: none; transition: opacity 0.9
 }
 
 .flor-intro {
-  max-width: 60vw;
-  max-height: 60vh;
+  max-width: 90vw;
+  max-height: 90vh;
   object-fit: contain;
   opacity: 0;
   filter: blur(8px);
