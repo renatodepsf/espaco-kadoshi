@@ -136,3 +136,53 @@ window.addEventListener("load", () => {
 //   window.open('https://api.whatsapp.com/send?phone=5532991397354&text=Olá! Quero tirar uma dúvida.', '_blank');
 // });
 
+/* TELA DE CADASTRO */
+// Abrir e fechar a tela de cadastro
+document.getElementById('abrirCadastro').addEventListener('click', function (e) {
+  e.preventDefault();
+  document.getElementById('tela-cadastro').classList.remove('oculto');
+  window.scrollTo(0, 0);
+});
+
+document.getElementById('fecharCadastro').addEventListener('click', function () {
+  document.getElementById('tela-cadastro').classList.add('oculto');
+});
+
+// configuracoes do formulario de cadastro
+
+document.getElementById("formularioCadastro").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const nome = document.getElementById("nome").value.trim();
+  const servico = document.getElementById("servico").value.trim();
+  let whatsappCliente = document.getElementById("whatsapp").value.trim();
+
+  whatsappCliente = whatsappCliente.replace(/\D/g, '');
+
+  if (!whatsappCliente.startsWith("55")) {
+    whatsappCliente = "55" + whatsappCliente;
+  }
+
+  if (!nome || !servico || whatsappCliente.length < 12) {
+    alert("Por favor, preencha todos os campos corretamente.");
+    return;
+  }
+
+  const numeroProfissional = "5532991397354";
+
+  const mensagem = `Novo cadastro recebido:\n\nNome: ${nome}\nTelefone: ${whatsappCliente}\nServiço solicitado: ${servico}`;
+  const url = `https://wa.me/${numeroProfissional}?text=${encodeURIComponent(mensagem)}`;
+
+  // Fecha a tela de cadastro antes de redirecionar
+  document.getElementById('tela-cadastro').classList.add('oculto');
+
+  // Redireciona diretamente para WhatsApp
+  window.location.href = url;
+
+  // Após retorno do WhatsApp, rola para o topo (opcional: use setTimeout caso necessário)
+  window.addEventListener("focus", () => {
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 500);
+  }, { once: true });
+});
