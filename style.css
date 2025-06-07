@@ -179,37 +179,35 @@ body {
 }
 
 /* BOTAO FLUTUANTE */
-.botao-flutuante {
-  position: fixed;
-  bottom: 28px;
-  right: 22px;
-  z-index: 999;
-  width: 62px;
-  height: 62px;
-  border: none;
-  border-radius: 50%;
-  background: #e781a7;
-  box-shadow: 0 6px 32px #eeb6cf48;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.19s, transform 0.15s, box-shadow 0.19s;
-  animation: flutua 1.5s infinite ease-in-out alternate;
-}
-.botao-flutuante:hover {
-  background: #bc3c76;
-  transform: scale(1.06);
-  box-shadow: 0 12px 40px #bc3c7675;
-}
-@keyframes flutua {
-  to { transform: translateY(-8px);}
-}
-.botao-flutuante svg {
-  display: block;
-}
-
-
+/*.botao-flutuante {*/
+/*  position: fixed;*/
+/*  bottom: 28px;*/
+/*  right: 22px;*/
+/*  z-index: 999;*/
+/*  width: 62px;*/
+/*  height: 62px;*/
+/*  border: none;*/
+/*  border-radius: 50%;*/
+/*  background: #e781a7;*/
+/*  box-shadow: 0 6px 32px #eeb6cf48;*/
+/*  cursor: pointer;*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  transition: background 0.19s, transform 0.15s, box-shadow 0.19s;*/
+/*  animation: flutua 1.5s infinite ease-in-out alternate;*/
+/*}*/
+/*.botao-flutuante:hover {*/
+/*  background: #bc3c76;*/
+/*  transform: scale(1.06);*/
+/*  box-shadow: 0 12px 40px #bc3c7675;*/
+/*}*/
+/*@keyframes flutua {*/
+/*  to { transform: translateY(-8px);}*/
+/*}*/
+/*.botao-flutuante svg {*/
+/*  display: block;*/
+/*}*/
 
 /* SOBRE */
 .sobre { background: var(--lavanda-suave); padding: 30px 0 22px 0; }
@@ -245,3 +243,31 @@ body {
 section, .footer, .header { opacity: 1; transform: none; transition: opacity 0.9s, transform 0.9s;}
 .fade-prepare { opacity: 0; transform: translateY(40px);}
 .fade-in { opacity: 1 !important; transform: translateY(0) !important;}
+
+/* BOTOES REDES SOCIAIS */
+.social-float {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-float a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  text-decoration: none;
+}
+
+.social-float img {
+  width: 24px;
+  height: 24px;
+}
