@@ -127,9 +127,8 @@ body {
 .hero-btn:hover { background: var(--btn-hover); transform: scale(1.04);}
 .hero-btn.clicado { filter: brightness(0.9); transform: scale(0.96); transition: filter 0.12s, transform 0.13s; }
 @media (max-width: 600px) {
-  .hero-content h1 { font-size: 1.24rem;}
-  .logotipo { width: 76px; height: 76px;}
-  .hero { padding: 28px 0 10px 0;}
+  .hero-content h1 { font-size: 1.24rem; }
+  .hero { padding: 28px 0 10px 0; }
 }
 
 /* SERVICOS */
@@ -269,7 +268,7 @@ section, .footer, .header { opacity: 1; transform: none; transition: opacity 0.9
 /* BOTOES REDES SOCIAIS */
 .social-float {
   position: fixed;
-  bottom: 100px;
+  bottom: 60px;
   right: 20px;
   z-index: 9999;
   display: flex;
