@@ -311,7 +311,14 @@ section, .footer, .header { opacity: 1; transform: none; transition: opacity 0.9
   max-width: 60vw;
   max-height: 60vh;
   object-fit: contain;
-  animation: aparecer 0.6s ease-in;
+  opacity: 0;
+  filter: blur(8px);
+  transition: opacity 1s ease, filter 1s ease;
+}
+
+.flor-intro.aparecer {
+  opacity: 1;
+  filter: blur(0px);
 }
 
 @keyframes aparecer {
