@@ -45,8 +45,16 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// BOTAO FLUTUANTE
-document.getElementById('botaoChat').addEventListener('click', function() {
-  window.open('https://api.whatsapp.com/send?phone=5532991397354&text=Olá! Quero tirar uma dúvida.', '_blank');
+window.addEventListener("load", () => {
+  const tela = document.getElementById("tela-inicial");
+  setTimeout(() => {
+    tela.style.opacity = "0";
+    setTimeout(() => tela.remove(), 800);
+  }, 3000);
 });
+
+// // BOTAO FLUTUANTE
+// document.getElementById('botaoChat').addEventListener('click', function() {
+//   window.open('https://api.whatsapp.com/send?phone=5532991397354&text=Olá! Quero tirar uma dúvida.', '_blank');
+// });
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Espaço Kadoshi</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -13,7 +13,8 @@
       <span class="logo">
         <svg width="32" height="32" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#efdbe9"/><ellipse
                 cx="12" cy="14" rx="8" ry="5" fill="#f7e7f4"/><ellipse cx="12" cy="9" rx="4" ry="2"
-                                                                       fill="#dabbe7"/></svg>
+                                                                       fill="#dabbe7"/>
+        </svg>
         Kadoshi
       </span>
         <nav id="mainMenu" class="menu">
@@ -31,11 +32,11 @@
 <main>
     <section id="inicio" class="hero">
         <div class="container hero-content">
-            <div class="hero-avatar">
-                <img src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&w=200&q=80"
+            <div class="logotipo">
+                <img src="assets/img/logo3.png"
                      alt="Kadoshi - Bem estar"/>
             </div>
-            <h1>Espaço Kadoshi</h1>
+            <!--            <h1>Espaço Kadoshi</h1>-->
             <p>Beleza, cuidado e autoestima com delicadeza.<br> Unhas, pele e bem-estar em um só lugar!</p>
             <a href="#servicos" class="hero-btn">Quero me cuidar</a>
         </div>
@@ -47,7 +48,7 @@
             <div class="servicos-lista">
                 <div class="servico-card">
                   <span class="servico-icon">
-                    <img src="manicure.png" alt="Manicure e Pedicure" class="icone-servico-img">
+                    <img src="assets/img/manicure.png" alt="Manicure e Pedicure" class="icone-servico-img">
                   </span>
                     <h3>Manicure & Pedicure</h3>
                     <span class="profissional-nome">Tairine</span>
@@ -58,7 +59,7 @@
 
                 <div class="servico-card">
                   <span class="servico-icon">
-                    <img src="estetica.png" alt="Estética" class="icone-servico-img">
+                    <img src="assets/img/estetica.png" alt="Estética" class="icone-servico-img">
                   </span>
                     <h3>Estética</h3>
                     <span class="profissional-nome">Jacqueline</span>
@@ -80,21 +81,35 @@
         </div>
     </section>
 
-    <section id="contato" class="contato">
-        <div class="container contato-content">
-            <h2>Contato</h2>
-            <p><b>WhatsApp:</b> <a href="https://api.whatsapp.com/send?phone=5532991397354" target="_blank">(32)
-                99139-7354</a></p>
-            <p><b>Endereço:</b> Rua Exemplo, 123, Juiz de Fora/MG</p>
-            <p><b>Funcionamento:</b> Seg a Sáb, 8h às 19h</p>
+    <section id="contato" class="onde-background">
+        <div class="container onde-texto">
+            <h2>Onde estamos?</h2>
+            <!--            <p><b>WhatsApp:</b> <a href="https://api.whatsapp.com/send?phone=5532991397354" target="_blank">(32)-->
+            <!--                99139-7354</a></p>-->
+            <p><b>Endereço:</b> Av. Santa Luzia, 405, Juiz de Fora/MG</p>
+            <p><b>Funcionamento:</b> Terça a Sábado, 8h às 18h</p>
         </div>
     </section>
-    <button class="botao-flutuante" id="botaoChat" aria-label="Atendimento Online">
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="12" fill="#e781a7"/>
-            <path d="M7 14v-4a3 3 0 013-3h4a3 3 0 013 3v3a3 3 0 01-3 3H9l-3 3v-3a3 3 0 013-3z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-    </button>
+    <!--    <button class="botao-flutuante" id="botaoChat" aria-label="Atendimento Online">-->
+    <!--        <svg width="30" height="30" viewBox="0 0 24 24" fill="none">-->
+    <!--            <circle cx="12" cy="12" r="12" fill="#e781a7"/>-->
+    <!--            <path d="M7 14v-4a3 3 0 013-3h4a3 3 0 013 3v3a3 3 0 01-3 3H9l-3 3v-3a3 3 0 013-3z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>-->
+    <!--        </svg>-->
+    <!--    </button>-->
+
+    <!-- botao fluente - falta inserir o link das redes sociais -->
+    <div class="social-float">
+        <a href="" target="_blank" title="WhatsApp">
+            <img src="https://img.icons8.com/ios-filled/50/25d366/whatsapp.png" alt="WhatsApp"/>
+        </a>
+        <a href="" target="_blank" title="Instagram">
+            <img src="https://img.icons8.com/ios-filled/50/E4405F/instagram-new.png" alt="Instagram"/>
+        </a>
+        <a href="" target="_blank" title="Facebook">
+            <img src="https://img.icons8.com/ios-filled/50/1877F2/facebook.png" alt="Facebook"/>
+        </a>
+    </div>
+
 </main>
 
 <footer class="footer">
@@ -102,6 +117,11 @@
         <span>&copy; Espaço Kadoshi 2024</span>
     </div>
 </footer>
-<script src="script.js"></script>
+<script src="assets/js/script.js"></script>
 </body>
+
+<div id="tela-inicial">
+    <img src="assets/img/flor-logo.png" alt="Flor Kadoshi" class="flor-intro">
+</div>
+
 </html>
