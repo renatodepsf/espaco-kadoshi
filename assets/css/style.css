@@ -266,32 +266,42 @@ section, .footer, .header { opacity: 1; transform: none; transition: opacity 0.9
 .fade-in { opacity: 1 !important; transform: translateY(0) !important;}
 
 /* BOTOES REDES SOCIAIS */
-.social-float {
-  position: fixed;
-  bottom: 60px;
-  right: 20px;
-  z-index: 9999;
+.footer .social-inline {
+  margin-top: 12px;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.social-float a {
-  display: flex;
-  align-items: center;
   justify-content: center;
-  width: 45px;
-  height: 45px;
-  background-color: #fff;
-  border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  text-decoration: none;
 }
 
-.social-float img {
-  width: 24px;
-  height: 24px;
+.footer .social-inline a img {
+  width: 26px;
+  height: 26px;
 }
+/*.social-float {*/
+/*  position: fixed;*/
+/*  bottom: 60px;*/
+/*  right: 20px;*/
+/*  z-index: 9999;*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  gap: 10px;*/
+/*}*/
+
+/*.social-float a {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  width: 45px;*/
+/*  height: 45px;*/
+/*  background-color: #fff;*/
+/*  border-radius: 50%;*/
+/*  box-shadow: 0 2px 5px rgba(0,0,0,0.2);*/
+/*  text-decoration: none;*/
+/*}*/
+
+/*.social-float img {*/
+/*  width: 24px;*/
+/*  height: 24px;*/
+/*}*/
 
 /* TELA DE ABERTURA */
 #tela-inicial {
@@ -326,7 +336,7 @@ section, .footer, .header { opacity: 1; transform: none; transition: opacity 0.9
 }
 
 /* ESTILO PARA A FLOR NO HEADER */
-.logo img {
+.logo img.logo-flor {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -334,4 +344,5 @@ section, .footer, .header { opacity: 1; transform: none; transition: opacity 0.9
   padding: 4px;
   box-sizing: border-box;
   box-shadow: 0 0 4px #eeb6cf42;
+  object-fit: contain;
 }
