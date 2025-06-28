@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const servico = this.getAttribute("data-servico");
 
             try {
-                const response = await fetch("/api/enviarMensagem", {
+                const response = await fetch("/api/mensage", {
                     method: "POST",
                     headers: {"Content-Type": "application/json"},
                     body: JSON.stringify({servico}),
