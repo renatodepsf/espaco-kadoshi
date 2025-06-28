@@ -159,6 +159,58 @@ window.addEventListener("load", () => {
     }, 4000); // tempo exibindo flor
 });
 
+// ===================================================
+// 📝 CHAMA FUNCAO NO FRONT-END - TELA CADASTRO
+// ===================================================
+document.addEventListener("DOMContentLoaded", function () {
+    const formulario = document.getElementById("formularioCadastro");
+
+    if (formulario) {
+        formulario.addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const nome = document.getElementById("nome").value.trim();
+            const servico = document.getElementById("servico").value.trim();
+            let whatsappCliente = document.getElementById("whatsapp").value.trim();
+
+            whatsappCliente = whatsappCliente.replace(/\D/g, "");
+
+            if (!whatsappCliente.startsWith("55")) {
+                whatsappCliente = "55" + whatsappCliente;
+            }
+
+            if (!nome || !servico || whatsappCliente.length < 12) {
+                alert("Por favor, preencha todos os campos corretamente.");
+                return;
+            }
+
+            try {
+                const response = await fetch("/api/enviarMensagem", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        nome,
+                        servico,
+                        whatsapp: whatsappCliente,
+                    }),
+                });
+
+                const data = await response.json();
+
+                if (data.url) {
+                    window.location.href = data.url;
+                } else {
+                    alert("Erro ao montar link do WhatsApp.");
+                }
+            } catch (error) {
+                alert("Erro ao enviar. Tente novamente.");
+                console.error(error);
+            }
+        });
+    }
+});
+
+
 
 // // TELA DE ENTRADA - MOSTRA APENAS 1 VEZ
 // window.addEventListener("load", () => {
